@@ -24,7 +24,7 @@ const ESLintLoader = {
         loader: 'eslint-loader',
         options: {
             configFile: __dirname + '/.eslintrc'
-        },
+        }
     }
 };
 
@@ -33,29 +33,29 @@ const CSSLoader = {
     test: /\.(sa|sc|c)ss$/,
     exclude: /node_modules/,
     use: [{
-            loader: devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-            options: {
-                // publicPath: './public/css/'
+        loader: devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+        options: {
+            // publicPath: './public/css/'
+        }
+    },
+    {
+        loader: 'css-loader',
+        options: {
+            importLoaders: 1
+        }
+    },
+    {
+        loader: 'postcss-loader',
+        options: {
+            config: {
+                path: __dirname + '/postcss.config.js'
             }
-        },
-        {
-            loader: 'css-loader',
-            options: {
-                importLoaders: 1
-            },
-        },
-        {
-            loader: 'postcss-loader',
-            options: {
-                config: {
-                    path: __dirname + '/postcss.config.js'
-                }
-            },
-        },
-        {
-            loader: 'sass-loader',
-        },
-    ],
+        }
+    },
+    {
+        loader: 'sass-loader'
+    }
+    ]
 };
 
 // Image Loader
