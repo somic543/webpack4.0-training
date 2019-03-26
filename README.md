@@ -2,5 +2,5 @@
 Webpack is a static module bundler for modern JavaScript applications. The project is for practice purposes only.
 
 <h3>Scripts</h3></br>
-<p color="blue" style="display: inline-block">npm run build</p>: run webpack in production mode. </br>
-<p color="blue" style="display: inline-block">npm run watch</p>: run webpack in developer mode. </br>
+<span color="blue">npm run build</span>: run webpack in production mode. </br>
+<span color="blue">npm run watch</span>: run webpack in developer mode. </br>
