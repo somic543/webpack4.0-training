@@ -1,6 +1,6 @@
 {
   "name": "webpack-training",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "babel-loader": "^8.0.5",
     "babel-minify-webpack-plugin": "^0.3.1",
     "babel-preset-env": "^1.7.0",
+    "bootstrap": "^4.3.1",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
     "cssnano": "^4.1.10",
@@ -41,6 +42,6 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
   },
-  "author": "MIT",
+  "author": "somic543",
   "license": "ISC"
 }

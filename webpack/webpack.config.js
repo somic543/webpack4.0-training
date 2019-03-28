@@ -5,24 +5,26 @@ const plugins = require('./plugins');
 module.exports = {
     entry: {
         app: './src/app.js',
-        adminApp: './src/adminApp.js'
+        // adminApp: './src/adminApp.js'
     },
     module: {
         rules: [
             loaders.JSLoader,
             loaders.ESLintLoader,
-            loaders.CSSLoader,
+            loaders.CSSLoader
         ]
     },
     output: {
-        path: path.resolve(__dirname, "../dist"),
-        filename: "[name].bundle.js", // [name] : name define in entry. 
+        path: path.resolve(__dirname, '../dist/public'),
+        filename: "js/[name].bundle.js", // [name] : name define in entry. 
+        publicPath: 'public'
+       
     },
     plugins: [
-        plugins.StyleLintPlugin,
-        plugins.MiniCssExtractPlugin,
         plugins.HtmlWebpackPlugin,
-        plugins.CleanWebpackPlugin,
+        plugins.StyleLintPlugin,
+        plugins.MiniCssExtractPlugin,              
+        plugins.CleanWebpackPlugin
         // plugins.MinifyPlugin
-    ],
+    ]
 };

@@ -1,0 +1,187 @@
+$lang: 'english' !default;
+
+// colors
+// names taken from http://www.color-blindness.com/color-name-hue/
+$black: #000;
+$white: #fff;
+$white-smoke: #efefef;
+$white-smoke-f8: #f8f8f8;
+$white-smoke-eb: #ebeaea;
+$white-smoke-ed: #ededed;
+$white-smoke: #ECECEC;
+$white-smoke-1: #ECEAEB;
+$stark-white: #cebdb3;
+$night-rider: #333;
+$night-rider-2: #2e2e2e;
+$charcoal: #444;
+$charcoal-42: #424242;
+$mortar: #555555;
+$mortar-4: #545454;
+$dim-gray: #666;
+$dim-gray-c: #6c6c6c;
+$suva-grey: #888;
+$nobel: #999;
+$nobel-b: #9b9b9b;
+$cerulean: #00629b;
+$dark-cerulean: #094f8d;
+$dark-cerulean-08: #084f8d;
+$dark-gray: #aaa;
+$dark-gray-6: #a6a6a6;
+$dark-gray-b: #b0b0b0;
+$dark-gray-b3: #b3b3b3;
+$dark-gray-83: #838383;
+$suva-grey: #959595;
+$gainsboro: #e0e0e0;
+$gainsboro: #e7e7e7;
+$gainsboro-5: #e5e5e5;
+$gainsboro-2: #e2e2e2;
+$gainsboro-6: #e6e6e6;
+$gainsboro-d: #dadada;
+$gainsboro-e1: #E1E1E1;
+$islamic-green: #019328;
+$dark-pastel-green: #00D039;
+$rain-forest: #64772d;
+$sangria: #ff0000;
+$teal: #008578;
+$tutu: #faeded;
+$very-light-gray: #cccccc;
+$white-smoke-0: #f0f0f0;
+$white-smoke-2: #f2f2f2;
+$search_background: white;
+//
+$very-light-grey: #cccbcb;
+$very-light-grey-1: #cacaca;
+$light-grey-1: #d1d1d1;
+$light-grey-5: #d5d5d5;
+$light-grey-7: #d7d7d7;
+$light-grey-ce: #cecece;
+$cabaret: #d13d5f;
+$echo-blue: #a2b6d2;
+$silver: #c5c5c5;
+$silver-ba: #bababa;
+$silver-b7: #b7b7b7;
+$silver-b8: #b8b8b8;
+$silver-c4: #c4c4c4;
+$silver-c5: #e8e8e8;
+$hawkes-blue: #ccdbe8;
+$shakespeare: #6e97bc;
+$mariner: #3c5a98;
+$cinnabar: #e14e42;
+$san-marino: #517fa4;
+$pigment-green: #3972a4;
+$tangerine-yellow: #ffcc00;
+$nero: #1a1a1a;
+$nero-19: #191919;
+$aqua: #00fcff;
+$smalt: #004d8f;
+$smalt-1: #004086;
+$smalt-2: #004e8f;
+$red: #f00;
+$red_1: #fe0808;
+$empress: #767676;
+$seal-brown: #020101;
+
+$link-color: $night-rider;
+$cart-header-bg: #cdcdcd;
+$mountain-meadow: #F9F9F9;
+$alice-blue: #dbeefd;
+$rose-bud: #ff9da0;
+$mongoose: #a38a78;
+$deep-sky-blue: #00cdf5;
+$dark-pink: #eb4c77;
+$tacha: #d0b060;
+$gossip: #a8cb72;
+$danube: #5698c2;
+$mortar-4-60: rgba(84,84,84,0.6);
+$cardinal: #c72127;
+$blue_70: rgba(9, 79, 141, 0.7);
+$gray_127:#7f7f7f;
+
+// ======
+$width: 100%;
+
+$swatch-types: black #000000, beige #f5f5dc, blue blue, purple #4d315a, red #b52739, brown #783201, green green, grey #8f979d, pink #fe249a, orange orange, white #ffffff, yellow #ffff00, navy navy, aquamarine #3db8c0, asphalt_black #393a3e, autumn_red #a41f1a, charcoal #978887, gold #ffd700, heather_grey #BEBBBB, ivory_gold #978887, mulberry #3a5779, regatta_blue #3f72ad, scarlett #4c3059, silver #C0C0C0, turquoise #4ee5f1, wine #722F37;
+
+// fonts
+$font-lato: 			'Lato', sans-serif !default;
+
+// default font family
+$sans-serif:			$font-lato;
+$sans-serif-alt:		$font-lato;
+$serif: 				Crete Round, serif !default;
+$heading-font:			$font-lato;
+
+// flag-icon-css
+$flag-icon-css-path: '../lib/flag-icon-css/flags';
+
+
+//==== Text size
+$fz-small:				14px !default;
+$fz-base:				16px !default;
+$fz-base-xs:			$fz-small;
+$fz-medium:				22px !default;
+$fz-heading1:			38px !default;
+$fz-heading2:			26px !default;
+$fz-heading-xs:			17px !default;
+$fz-heading3:			32px !default;
+$fz-subheading:			20px !default;
+
+
+//==== Spacing
+$grid-gutter-width: 30px !default;
+
+
+//==== Media queries breakpoints
+// Use xx-min: for min-width / xx-max: for max-width in media queries
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+
+$screen-xlg:				 1428px !default;
+$screen-xlg-min:			 $screen-xlg !default;
+$screen-xlg-max:			 ($screen-xlg-min - 1) !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+// ==== Grid System
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+$grid-gutter-width:         30px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+//== Container sizes
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1170px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;

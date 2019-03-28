@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // true if develop mode
-const devMode = process.env.NODE_ENV !== 'production';
+// const devMode = process.env.NODE_ENV !== 'production';
 
 // Javascript loader
 const JSLoader = {
@@ -31,12 +31,10 @@ const ESLintLoader = {
 //CSS Loader
 const CSSLoader = {
     test: /\.(sa|sc|c)ss$/,
+    // sideEffects: true,
     exclude: /node_modules/,
     use: [{
-        loader: devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-        options: {
-            // publicPath: './public/css/'
-        }
+        loader: MiniCssExtractPlugin.loader   
     },
     {
         loader: 'css-loader',
@@ -47,9 +45,15 @@ const CSSLoader = {
     {
         loader: 'postcss-loader',
         options: {
+            ident: 'postcss',
             config: {
                 path: __dirname + '/postcss.config.js'
-            }
+            },
+            plugins: [
+                require('autoprefixer')({
+                    'browsers': ['> 1%', 'last 2 versions']
+                })
+            ]
         }
     },
     {

@@ -1,29 +1,12 @@
-.box {
-    width: 10px;
-    height: 10px;
-    background: #000;
-    &:hover {
-        background: red;
-    }
-    &:active {
-        background: green;
+// @import "~bootstrap/scss/bootstrap";
+@import "variables";
+@import "mixins";
+
+.app {
+    background: red;
+    .size {
+        @include size(5px, 5px);
+        @include bg-variant('.parent', blue);
     }
 }
 
-.navigation {
-    font-size: 10px;
-    li {
-        list-style: none;
-       
-        a {
-            text-decoration: none;
-            color: blue;
-            &:hover {
-                color: lighten(blue, 20%);
-            }
-            &:active {
-                font-size: 100px;
-            }
-        }
-    }
-} 

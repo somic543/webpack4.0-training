@@ -1,0 +1,12 @@
+// Typography
+
+// [converter] $parent hack
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color;
+  }
+  #{$parent}:hover,
+  #{$parent}:focus {
+    color: darken($color, 10%);
+  }
+}

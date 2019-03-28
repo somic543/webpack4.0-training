@@ -1,0 +1,58 @@
+// X
+@mixin xbutton($width: 20px, $color: #000, $boder-width: 1px, $hover-color: #000) {
+  position: relative;
+  display: inline-block;
+  width: $width;
+  height: $width;
+  overflow: hidden;
+
+  &::before,&::after {
+    content:'';
+    position: absolute;
+    height: $boder-width;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -($boder-width / 2);
+    background: $color;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  @if $hover-color != $color {
+    &:hover {
+      &::before,&::after {
+        background: $hover-color;
+      }
+    }
+  }
+}
+
+@mixin xbutton-color($color) {
+  &::before,&::after {
+    background: $color;
+  }
+}
+
+@mixin xbutton-line($border-width) {
+  &::before,&::after {
+    height: $boder-width;
+    margin-top: -($boder-width / 2);
+  }
+}
+
+@mixin xbutton-size($width) {
+  @include square($width);
+}
+
+@mixin xbutton-hovercolor($hover-color) {
+  &:hover {
+    &::before,&::after {
+      background: $hover-color;
+    }
+  }
+}
