@@ -1,22 +1,12 @@
 import './scss/style.scss';
-
-var People = {
-    name : "Hung",
-    age : 18,
-    job : 'Web developer',
-    getInfo: function () {
-        return this.name + ' - ' + this.age + ' - ' + this.job;
-    }
-};
-
-Object.defineProperty(People, "x", {
-    get() {
-        return this.stored_x;
-    },
-    set(x) {
-        this.stored_x = x;
-    }
-});
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
  
-export default People; 
-  
+
+$(document).ready(function () {
+    var loader = require('./js/loader.js');   
+    loader.animation().then(() => {    
+        require('./js/navigation').animation();       
+    });
+});

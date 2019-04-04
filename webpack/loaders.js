@@ -34,46 +34,61 @@ const CSSLoader = {
     // sideEffects: true,
     exclude: /node_modules/,
     use: [{
-        loader: MiniCssExtractPlugin.loader   
-    },
-    {
-        loader: 'css-loader',
-        options: {
-            importLoaders: 1
+            loader: MiniCssExtractPlugin.loader
+        },
+        {
+            loader: 'css-loader',
+            options: {
+                importLoaders: 1
+            }
+        },
+        {
+            loader: 'postcss-loader',
+            options: {
+                ident: 'postcss',
+                config: {
+                    path: __dirname + '/postcss.config.js'
+                },
+                plugins: [
+                    require('autoprefixer')({
+                        'browsers': ['> 1%', 'last 2 versions']
+                    })
+                ]
+            }
+        },
+        {
+            loader: 'sass-loader'
         }
-    },
-    {
-        loader: 'postcss-loader',
-        options: {
-            ident: 'postcss',
-            config: {
-                path: __dirname + '/postcss.config.js'
-            },
-            plugins: [
-                require('autoprefixer')({
-                    'browsers': ['> 1%', 'last 2 versions']
-                })
-            ]
-        }
-    },
-    {
-        loader: 'sass-loader'
-    }
     ]
 };
 
 // Image Loader
 const ImageLoader = {
-    test: /\.(png|svg|jpg|gif)$/,
+    test: /\.(gif|png|jpe?g|svg)$/i,
     use: [{
-        loader: 'file-loader'
+        loader: 'file-loader',
+        options: {
+            name: 'images/[name].[ext]',
+            publicPath: '../'
+        }
     }]
-}
+};
+
+const FontLoader = {
+    test: /\.(woff|woff2|ttf|otf)$/,
+    loader: 'file-loader',   
+
+    options: {
+        name: 'fonts/[name].[ext]',        
+        publicPath: '../'
+    }
+};
 
 // module exports
 module.exports = {
     JSLoader: JSLoader,
     ESLintLoader: ESLintLoader,
     CSSLoader: CSSLoader,
-    ImageLoader: ImageLoader
+    ImageLoader: ImageLoader,
+    FontLoader: FontLoader
 };
